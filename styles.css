@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: white;
+}
+.container{
+    background-color: #000;
+    background: #000;
+    width: 70rem;
+    height: 40rem;
+    border-radius: 8%;
+    padding: 5% 5%;
+}
+.container header {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .column {
+  display: flex;
+  align-items: center;
+}
+header .column span {
+  font-size: 500;
+  margin-right: 15px;
+  font-size: 1.5rem;
+}
+.checkbox input{
+  width: 60px;
+  height: 30px;
+  background-color: #4b4b4b;
+  border-radius: 30px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+}
+.checkbox input::before{
+  content: "";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  background-color: rgb(111, 107, 107);
+  border-radius: inherit;
+}
+.checkbox input:checked:before{
+  transition: all 1s linear;
+  left: 30px;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+}
+.piano-keys{
+  text-align: center;
+  display: flex;
+  margin-top: 40px;
+  list-style: none;
+  text-transform: uppercase;
+  position: relative;
+}
+.piano-keys .key {
+  display: flex;
+  cursor: pointer;
+}
+.key-black{
+  border-radius: 8px;
+  width: 7%;
+  min-width: 40px;
+  height: 250px;
+  z-index: 2;
+  margin: 0 -22px 0 -22px;
+  background: linear-gradient(#333, #000 );
+}
+.key-black:active{
+  box-shadow: inset -5px 5px 10px rgb(111, 107, 107); 
+  background: to bottom, #000, #434343 ;
+}
+
+.key-white{
+  border-radius: 8px;
+  width: 9%;
+  min-width: 50px;
+  height: 400px;
+  border: 1px solid #ccc;
+  background: linear-gradient(#fff 95%, #eee 5%);
+  color: rgb(111, 107, 107);
+  border: 1px solid;
+}
+.key-white:active{
+  box-shadow: inset -5px 5px 20px;
+  background: to bottom, #fff 0%, #eee 100%;
+}
+.key-white span{
+  color: rgb(111, 107, 107);
+  position: relative;
+  top: 350px;
+}
+.key-black span{
+  color: rgb(111, 107, 107);
+  position: relative;
+  top: 200px;
+}
+.hide {
+  visibility: hidden;
+}
